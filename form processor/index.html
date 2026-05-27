@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Form Processor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="container">
+
+        <form action="process.php" method="POST" class="form-box">
+
+            <h1>CREATE ACCOUNT</h1>
+
+            <p class="subtitle">
+                Futuristic Form Processing System
+            </p>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input 
+                    type="text"
+                    name="fullname"
+                    placeholder="Full Name"
+                    required
+                >
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input 
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <span id="togglePassword">
+                    <i class="fa-solid fa-eye"></i>
+                </span>
+
+            </div>
+
+            <div class="strength">
+
+                <div id="strength-bar"></div>
+
+            </div>
+
+            <button type="submit" name="submit">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Submit Form
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
