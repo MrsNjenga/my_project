@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <form id="form">
+
+      <h2>Registration Form</h2>
+
+      <!-- Name -->
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <small id="nameError" class="error">
+          Name must be at least 3 characters
+        </small>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <small id="emailError" class="error">
+          Enter a valid email
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <small id="passwordError" class="error">
+          Password must be at least 6 characters
+        </small>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+        <small id="confirmError" class="error">
+          Passwords do not match
+        </small>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p id="successMessage" class="success">
+        Form submitted successfully!
+      </p>
+
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
