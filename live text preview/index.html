@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Buttons</title>
+    <title>Live Text Preview</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="container">
 
-        <button class="btn">Hover Me</button>
+        <div class="input-box">
 
-        <button class="btn pulse">Pulse</button>
+            <h2>Live Text Editor</h2>
 
-        <button class="btn glow">Glow</button>
+            <textarea 
+                id="textInput"
+                placeholder="Type something amazing..."
+            ></textarea>
 
-        <button class="btn click-btn" id="clickBtn">
-            Click Me
-        </button>
+            <div class="buttons">
+
+                <button onclick="changeStyle('bold')">
+                    Bold
+                </button>
+
+                <button onclick="changeStyle('italic')">
+                    Italic
+                </button>
+
+                <button onclick="changeStyle('uppercase')">
+                    UPPER
+                </button>
+
+                <button onclick="clearText()">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="preview-box">
+
+            <h2>Live Preview</h2>
+
+            <div id="preview">
+                Your text will appear here...
+            </div>
+
+        </div>
 
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>

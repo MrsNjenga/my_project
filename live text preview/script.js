@@ -1,13 +1,48 @@
-const clickBtn = document.getElementById("clickBtn");
+const textInput = document.getElementById("textInput");
+const preview = document.getElementById("preview");
 
-clickBtn.addEventListener("click", () => {
+textInput.addEventListener("input", () => {
 
-    clickBtn.innerText = "Clicked!";
-    clickBtn.classList.add("success");
-
-    setTimeout(() => {
-        clickBtn.innerText = "Click Me";
-        clickBtn.classList.remove("success");
-    }, 2000);
+    if(textInput.value.trim() === ""){
+        preview.innerHTML = "Your text will appear here...";
+    }else{
+        preview.innerHTML = textInput.value;
+    }
 
 });
+
+/* STYLE FUNCTIONS */
+
+function changeStyle(style){
+
+    if(style === "bold"){
+        preview.style.fontWeight =
+        preview.style.fontWeight === "bold"
+        ? "normal"
+        : "bold";
+    }
+
+    if(style === "italic"){
+        preview.style.fontStyle =
+        preview.style.fontStyle === "italic"
+        ? "normal"
+        : "italic";
+    }
+
+    if(style === "uppercase"){
+        preview.style.textTransform =
+        preview.style.textTransform === "uppercase"
+        ? "none"
+        : "uppercase";
+    }
+
+}
+
+/* CLEAR TEXT */
+
+function clearText(){
+
+    textInput.value = "";
+    preview.innerHTML = "Your text will appear here...";
+
+}
