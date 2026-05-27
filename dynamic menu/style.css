@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+nav{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+#menu{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+#menu li{
+    position:relative;
+}
+
+#menu li a{
+    color:white;
+    text-decoration:none;
+    padding:10px;
+    display:block;
+    transition:0.3s;
+}
+
+#menu li a:hover{
+    background:#333;
+    border-radius:5px;
+}
+
+/* Dropdown */
+.submenu{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    background:#222;
+    list-style:none;
+    min-width:180px;
+}
+
+.submenu li{
+    width:100%;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* Mobile Button */
+#menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    #menu{
+        display:none;
+        flex-direction:column;
+        background:#111;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    #menu.active{
+        display:flex;
+    }
+
+    #menu-btn{
+        display:block;
+    }
+
+    .submenu{
+        position:static;
+    }
+}
