@@ -1,24 +1,27 @@
-// script.js
+const form = document.querySelector("form");
 
-const form = document.getElementById("contactForm");
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-form.addEventListener("submit",(e)=>{
+    const name = document.querySelector('input[type="text"]').value.trim();
+    const email = document.querySelector('input[type="email"]').value.trim();
+    const subject = document.querySelectorAll('input[type="text"]')[1].value.trim();
+    const message = document.querySelector("textarea").value.trim();
 
-  e.preventDefault();
+    if(name === "" || email === "" || subject === "" || message === ""){
+        alert("Please fill in all fields.");
+        return;
+    }
 
-  const button = document.querySelector("button");
+    const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  button.innerHTML = "Sending...";
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email address.");
+        return;
+    }
 
-  setTimeout(()=>{
+    alert("✅ Message sent successfully!");
 
-    button.innerHTML = "Message Sent 🚀";
-
-    setTimeout(()=>{
-      button.innerHTML = "Send Message";
-      form.reset();
-    },2000);
-
-  },1500);
-
+    form.reset();
 });
