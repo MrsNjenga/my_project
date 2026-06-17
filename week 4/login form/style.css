@@ -25,9 +25,9 @@ body{
   height:100%;
   background:
   radial-gradient(circle at top left,#00f7ff33,transparent 30%),
-  radial-gradient(circle at bottom right,#8a2be233,transparent 30%),
+  radial-gradient(circle at bottom right,#8a2be233,transparent 20%),
   #020412;
-  animation:bgAnimation 8s infinite alternate;
+  animation:bgAnimation 9s infinite alternate;
 }
 
 @keyframes bgAnimation{
